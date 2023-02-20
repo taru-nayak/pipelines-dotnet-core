@@ -1,4 +1,11 @@
 # Starter pipeline
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Visual Studio Enterprise(a792e84d-155d-4064-bb7e-9123e655acc6)'
+    appType: 'webApp'
+    appName: 'bananapp'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
